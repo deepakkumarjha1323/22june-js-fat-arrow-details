@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js Fat Arrow Details</title>
+    </head>
+    <body>
+        
+        <script>
+            // Lets Create a Functions
+            // Old Way 
+            // 1. Function defination
+            function myFunctionA(...n1){ // 'n1' is a formal argument with rest operators
+                // Function Body
+                // Every Function may Return somethigs
+                return n1[0];
+            }
+
+            // New Way
+            // Fat Arrow Functions
+            let myFunctionB=(...n2)=>{
+                // Function body
+                console.log(n2[1])
+                let a = 5; //  local Variable 
+                // Every function may return somethings
+                return a + n2[1];
+            }
+
+            var myFunctionC=n3=>{
+                console.log(n3);
+            }
+
+            // const myFunctionD= n4,n5=>{
+
+            // }
+
+            // 2. Calling
+            console.log(myFunctionA(2));
+            console.log(myFunctionB(2,5));
+            console.log(myFunctionC(5));
+        </script>
+    </body>
+</html>
